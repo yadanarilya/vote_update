@@ -12,10 +12,10 @@ def app():
     driver = webdriver.Firefox(options=options)
     driver.get(url)
     print(driver.title)
-    for _ in range(2): # ran 60 round 
+    for _ in range(60): # ran 60 round 
         try:
             for _ in range(5):
-                yada_select = driver.find_element(By.ID, "PDI_answer13821191")
+                yada_select = driver.find_element(By.ID, "PDI_answer61654935")
                 driver.execute_script("arguments[0].click();", yada_select)
                 driver.implicitly_wait(1)
 
@@ -25,11 +25,11 @@ def app():
 
                 ## captcha Ex. 9 + 10 =
                 captcha = driver.find_element(By.CSS_SELECTOR, ".h-captcha > span > p")
-                print(captcha.text)
+                # print(captcha.text)
                 cap_text = captcha.text
                 cap_list = cap_text.split() # Ex. ["9", "+", "10", "="]
                 cap_answer = int(cap_list[0])+int(cap_list[2])
-                print(cap_answer)
+                # print(cap_answer)
                 driver.find_element(By.NAME, "answer").send_keys(cap_answer)
                 driver.implicitly_wait(1)
 
