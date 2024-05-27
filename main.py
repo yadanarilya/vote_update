@@ -7,7 +7,7 @@ options = Options()
 options.add_argument("--headless")
 
 def app():
-    url = 'https://www.thaiupdate.info/rising-female-star-2024-group-3/'
+    url = 'https://www.thaiupdate.info/drama-series-2024-group-1/'
 
     driver = webdriver.Firefox(options=options)
     driver.get(url)
